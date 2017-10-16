@@ -28,4 +28,9 @@
     <string name="qa_callback">问题反馈:\n 邮件格式格式：\n 1) 手机标识（移动联通IMEI，电信MEID）\n 2) 问题发生时间；\n 3）定位类型：失败（给出返回码），或者不准（给出真实位置）等；\n 4）具体描述：细节描述，可以给出问题发生的频率或者APP名称，sdk版本等，也可以加上附件如日志，贴图等\n </string>
 
     <string name="qa_callback_mail">反馈邮箱:loc-bugs@baidu.com</string>
+    <string name="button_ok">确认</string>
+    <string name="button_cancel">取消</string>
+    <string name="menu_setting">设置</string>
+    <string name="setting_open_location_permission">请在设置中打开定位权限</string>
+    <string name="message_permission_explanation_location">搜索设置需要打开定位权限</string>
 </resources>

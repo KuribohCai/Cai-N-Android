@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+
+    <TextView
+        android:id="@+id/item_id"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:gravity="center"
+        android:text="编号"
+        android:textColor="#0000ff"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/item_id_back"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/item_id"
+        android:background="#cccccc" />
+
+    <TextView
+        android:id="@+id/item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/item_id_back"
+        android:text="名称"
+        android:textSize="26sp" />
+
+    <TextView
+        android:id="@+id/item_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_name"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/item_id_back"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="ff:ff:ff:ff:ff:ff:ff"
+        android:textColor="#ff0000"
+        android:textSize="20sp" />
+
+</RelativeLayout>

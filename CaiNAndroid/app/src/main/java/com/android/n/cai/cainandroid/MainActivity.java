@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.android.n.cai.cainandroid.bluetooth.BluetoothActivity;
+import com.android.n.cai.cainandroid.bluetooth.BluetoothBleActivity;
 import com.android.n.cai.cainandroid.common.BaseActivity;
+import com.android.n.cai.cainandroid.location.android.LocationActivity;
 import com.android.n.cai.cainandroid.location.baidu.BaiDuSDKActivity;
 import com.android.n.cai.cainandroid.location.gaode.GaoDeSDKActivity;
-import com.android.n.cai.cainandroid.location.android.LocationActivity;
 
 import java.util.ArrayList;
 
@@ -51,7 +53,7 @@ public class MainActivity extends BaseActivity {
         getPersimmions();
     }
 
-    @OnClick({R.id.baidu_btn, R.id.gaode_btn, R.id.origin_btn})
+    @OnClick({R.id.baidu_btn, R.id.gaode_btn, R.id.origin_btn,R.id.bluetooth_btn,R.id.bluetooth_ble_btn})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.baidu_btn:
@@ -62,6 +64,12 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.origin_btn:
                 LocationActivity.startActivity(this, new Bundle());
+                break;
+            case R.id.bluetooth_btn:
+                BluetoothActivity.startActivity(this, new Bundle());
+                break;
+            case R.id.bluetooth_ble_btn:
+                BluetoothBleActivity.startActivity(this, new Bundle());
                 break;
         }
     }

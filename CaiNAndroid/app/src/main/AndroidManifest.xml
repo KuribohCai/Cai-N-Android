@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.android.n.cai.cainandroid">
 
+    <!--地图定位-->
     <!-- 这个权限用于进行网络定位-->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <!-- 这个权限用于访问GPS定位-->
@@ -11,6 +12,7 @@
     <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
     <!-- 用于读取手机当前的状态-->
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
@@ -20,6 +22,14 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <!-- SD卡读取权限，用户写入离线定位数据-->
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+
+    <!--蓝牙-->
+    <!--允许程序连接到已配对的蓝牙设备-->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <!--允许程序发现和配对蓝牙设备-->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <!--required为true时，则应用只能在支持BLE的Android设备上安装运行；required为false时，Android设备均可正常安装运行，需要在代码运行时判断设备是否支持BLE feature-->
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
 
     <!--让layout适应屏幕的大小-->
     <supports-screens
@@ -78,6 +88,8 @@
             android:name=".location.gaode.GaoDeSDKActivity"
             android:configChanges="orientation|keyboardHidden"/>
         <activity android:name=".location.android.LocationActivity"/>
+        <activity android:name=".bluetooth.BluetoothActivity"/>
+        <activity android:name=".bluetooth.BluetoothBleActivity"/>
     </application>
 
 </manifest>

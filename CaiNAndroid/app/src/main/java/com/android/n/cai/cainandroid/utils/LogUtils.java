@@ -1,6 +1,5 @@
 package com.android.n.cai.cainandroid.utils;
 
-import android.os.SystemClock;
 import android.util.Log;
 
 import com.android.n.cai.cainandroid.BuildConfig;
@@ -15,66 +14,66 @@ public class LogUtils {
 
     // 获取毫秒值
     private static long getCurrentTime() {
-        return SystemClock.currentThreadTimeMillis();
+        return System.currentTimeMillis();
     }
 
     public static void i(String tag, String msg) {
         if (BuildConfig.DEBUG) {
-            Log.i(tag, "*Time:" + getCurrentTime() + "/n*Msg:" + msg);
+            Log.i(tag, "*Time:" + getCurrentTime() + "*Msg:" + msg);
         }
     }
 
     public static void i(String tag, String msg, Throwable t) {
         if (BuildConfig.DEBUG) {
-            Log.i(tag, "*Time:" + getCurrentTime() + "/n*Msg:" + msg, t);
+            Log.i(tag, "*Time:" + getCurrentTime() + "*Msg:" + msg, t);
         }
     }
 
     public static void d(String tag, String msg) {
         if (BuildConfig.DEBUG) {
-            Log.d(tag, "*Time:" + getCurrentTime() + "/n*Msg:" + msg);
+            Log.d(tag, "*Time:" + getCurrentTime() + "*Msg:" + msg);
         }
     }
 
     public static void d(String tag, String msg, Throwable t) {
         if (BuildConfig.DEBUG) {
-            Log.d(tag, "*Time:" + getCurrentTime() + "/n*Msg:" + msg, t);
+            Log.d(tag, "*Time:" + getCurrentTime() + "*Msg:" + msg, t);
         }
     }
 
     public static void e(String tag, String msg) {
         if (BuildConfig.DEBUG) {
-            Log.d(tag, "*Time:" + getCurrentTime() + "/n*Msg:" + msg);
+            Log.e(tag, "*Time:" + getCurrentTime() + "*Msg:" + msg);
         }
     }
 
     public static void e(String tag, String msg, Throwable t) {
         if (BuildConfig.DEBUG) {
-            Log.e(tag, "*Time:" + getCurrentTime() + "/n*Msg:" + msg, t);
+            Log.e(tag, "*Time:" + getCurrentTime() + "*Msg:" + msg, t);
         }
     }
 
     public static void w(String tag, String msg) {
         if (BuildConfig.DEBUG) {
-            Log.w(tag, "*Time:" + getCurrentTime() + "/n*Msg:" + msg);
+            Log.w(tag, "*Time:" + getCurrentTime() + "*Msg:" + msg);
         }
     }
 
     public static void w(String tag, String msg, Throwable t) {
         if (BuildConfig.DEBUG) {
-            Log.w(tag, "*Time:" + getCurrentTime() + "/n*Msg:" + msg, t);
+            Log.w(tag, "*Time:" + getCurrentTime() + "*Msg:" + msg, t);
         }
     }
 
     public static void v(String tag, String msg) {
         if (BuildConfig.DEBUG) {
-            Log.v(tag, "*Time:" + getCurrentTime() + "/n*Msg:" + msg);
+            Log.v(tag, "*Time:" + getCurrentTime() + "*Msg:" + msg);
         }
     }
 
     public static void v(String tag, String msg, Throwable t) {
         if (BuildConfig.DEBUG) {
-            Log.v(tag, "*Time:" + getCurrentTime() + "/n*Msg:" + msg, t);
+            Log.v(tag, "*Time:" + getCurrentTime() + "*Msg:" + msg, t);
         }
     }
 
