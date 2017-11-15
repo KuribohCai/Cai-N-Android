@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.android.n.cai.cainandroid"
         minSdkVersion 19
@@ -19,7 +19,7 @@ android {
     buildTypes {
         release {
             //代码混淆
-            minifyEnabled false
+            minifyEnabled true
             //zip优化
             zipAlignEnabled true
             //移除无用的resource文件
@@ -52,4 +52,6 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     // eventbus
     compile 'org.greenrobot:eventbus:3.0.0'
+    // moshi
+    compile 'com.squareup.moshi:moshi:1.5.0'
 }
